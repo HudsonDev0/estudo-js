@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condicionais Simples</title>
+</head>
+<body>
+    <h1>Digite sua velocidade</h1>
+    <input type="number" name="tvel" id="tvel">
+    <input type="submit" value="ENVIAR" onclick="clicar()">
+    <p id="res">...</p>
+    <script>
+        
+        function clicar(){
+            let tvel = document.getElementById('tvel')
+            let resultado = document.getElementById('res')
+            let vel = Number(tvel.value)
+            resultado.innerHTML = `Sua velocidade foi de <strong>${vel}km/h</strong>`
+            if (vel > 60) {
+                resultado.innerHTML += "<p>Você foi MULTADO</p>"
+            } else {
+                resultado.innerHTML += "<p>Dirija com cuidado.</p>"
+            }
+        }
+
+    </script>
+</body>
+</html>

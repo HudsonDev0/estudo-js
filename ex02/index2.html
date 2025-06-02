@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS</title>
+    <style>
+
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+
+        body{
+            height: 100vh;
+            width: 100vw;
+            font-family: 'Courier New', Courier, monospace;
+            background-image: linear-gradient(to top, black, rgb(0, 255, 60));
+        }
+
+        h1{
+            padding: 15px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Começando a estudar JavaScript</h1>
+
+    <script>
+        let n1 = Number(window.prompt('Digite um numero: '))
+        let n2 = Number(window.prompt('Digite mais um número: '))
+        let s = n1 + n2 
+        window.alert(`a soma dos valores ${n1} e ${n2} é: ` + s)
+    </script>
+</body>
+</html>

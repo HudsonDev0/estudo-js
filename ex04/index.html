@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clique</title>
+    <style>
+        #clique{
+            background-color: bisque;
+            width: 200px;
+            height: 200px;
+        }
+
+        p{
+            text-align: center;
+            padding-top: 85px;
+        }
+    </style>
+</head>
+<body>
+    <div id="clique">
+        <p>Clique aqui</p>
+    </div>
+
+    
+        <script>
+            let dv = document.getElementById('clique')
+
+            dv.addEventListener('click', clicar)
+            dv.addEventListener('mouseenter', entrar)
+            dv.addEventListener('mouseleave', saiu)
+            dv.addEventListener('mousedown', pressionado)
+            
+            function clicar() {
+                dv.innerHTML = '<p>Clicou</p>'
+                dv.style.background = 'red'
+            }
+
+            function entrar() {
+                dv.innerHTML = '<p>Entrou</p>'
+            }
+
+            function saiu() {
+                dv.innerHTML = '<p>Saiu</p>'
+                dv.style.background = 'bisque'
+            }
+
+            function pressionado() {
+                dv.style.background = 'purple'
+            }
+        </script>
+    
+</body>
+</html>

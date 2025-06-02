@@ -1,0 +1,254 @@
+		
+		PRIMEIROS COMANDOS:
+window.alert('escreva algo'): pop-up de alerta.
+window.confirm('aperte ok ou cancelar'): pop up de confirmação.
+window.prompt('caixa de dialogo'): abre uma caixa de texto para o usuário digitar.
+
+	ADICIONANDO COMENTÁRIOS:
+
+//: comentário em uma linha
+/* */: comentário em mais de uma iinha
+
+	CONCEITOS GERAIS:
+
+Sinal de = significa que a variável RECEBE algo.
+
+let n1 = 5 (variável n1 recebe 5).
+
+let: declaração de variável
+
+let s1 = 'string'
+let s1 = "string"
+let s1 = `string`
+
+É possível utilizar aspas duplas, apócrifo e a crase, há diferenças.. será falado mais pra frente, mas existem
+3 formas de delimitar uma string(linha, mais de um caractere) em JavaScript.
+
+No JavaScript, para os identificadores(variáveis) temos as seguintes regras:
+
+1. Podem começar com $ ou _
+2. Não podem começar com número
+3. É possível usar letra e números
+4. É possível usar acento e símbolos. Exemplo: média ou o símbolo do pi.
+5. Não podem conter espaços
+6. Não podem ser palavras reservadas.
+
+TAMBÉM no Javascript uma letra maiuscula tem diferença. Uma variável n1 é diferente de uma variável N1.
+
+Para saber o tipo da variável, em javascript, usar o comando typeof no node. Exemplo:
+let n = 200
+typeof n
+(number)
+
+Ele vai exibir que a variável n é do tipo número.
+
+n = '200'
+typeof n
+(string)
+
+n = [200]
+typeof n
+(object)
+
+Você também consegue usar typeof para qualquer tipo de dado e ele te retornará qual tipo de dado é.
+
+	Declaração de variável no JS
+
+let x = window.prompt('Digite um dado.')
+window.alert('Você digitou: ' + x)
+
+Em caso de número, ou string e etc.. você precisa converter o dado pro tipo de dado que você quer. Exemplo:
+Se nesse prompt eu digitar um número e eu quiser somar ele com outro, eu preciso declarar aquele número como um Number
+Caso contrário, o JS vai entender como string. Então, se eu quiser recolher um dado numérico, preciso fazer da seguinte
+forma: Number(window.prompt('Digite um número')) assim, o dado estará sendo entendido como um número.
+
+    Podemos também converter um número para string, colocando String(x). Ou então x.toString()
+
+	Template strings
+
+  Você consegue concatenar as strings sem sinal de mais, colocando ${} nas variáveis.
+Exemplo:
+
+let idade = 14
+let nome = 'JacoEscripto da Silva'
+let nota = 5.4
+
+Ao invés de ficar: 'O aluno ' + nome + 'de ' + idade + 'anos '.... Você pode fazer o seguinte:
+`O aluno ${nome} de ${idade} anos tirou nota ${nota}` (só funciona se a string tiver entre acentos grave ``)
+
+	Comandos para string:
+
+variavel.lenght: mostra quantos caractere a string tem;
+variavel.toUpperCase(): coloca tudo pra maiusculo;
+variavel.toLowerCase(): coloca tudo pra minúsculo.
+
+	OPERADORES
+
+aritméticos:
++
+-
+*
+/ : divisor real
+% : resto da divisão inteira. Exemplo: 5/2 = 1. Por que? Porque o resto da divisão de 5/2 é 1. 
+**: potência
+
+auto-atribuição: quando uma variável x recebe ela mesmo mais um valor: x = x + 2
+pode-se escrever encurtadamente: x += 2 (isso significa x = x + 2 e funciona pra todos os operadores: / - % * e etc)
+e é possível encurtar ainda mais quando se trata da variável receber mais "1". Exemplo: x++(x = x + 1).
+x++ significa q vc está adicionando 1 à variável. O mesmo funciona para --: x-- = x-1.
+
+relacionais:
+>
+<
+>=
+<=
+==: igual.
+!=: diferente.
+
+   (Sempre da um valor booleano)
+
+--- NO JAVASCRIPT O SINAL DE IGUALDADE "==" NÃO TESTA O TIPO. ENTÃO 5 == '5' -> true ---
+--- AGORA... SE você quiser testar se o dado tem o mesmo tipo TAMBÉM, você usa ===. Exemplo: 5 === '5' -> false ---
+--- TAMBÉM tem como testar a diferença: != testa se o dado é igual, já o !== testa se o tipo também é igual. ---
+
+lógicos:
+
+!: negação
+&&: e
+||: ou
+
+  ORDEM DE OPERADORES: PRIMEIRO operadores aritméticos. SEGUNDO: operadores relacionais. TERECEIRO: operadores lógicos.
+ ORDEM DE OPERADORES LÓGICOS: se em uma expressão houver tanto os operadores "não" "e" e "ou", a ordem será sempre essa:
+((NÃO depois E depois OU)).
+
+
+operador ternário:
+
+  "?:" ele se chama ternário porque tem 3 partes: teste?true:false. Exemplo:
+Média >= 7?"Aprovado":"Reprovado"  O OPERADOR TERNÁRIO É SEMPRE O ULTIMO A SER FEITO.
+
+
+	DOM
+  Document Object Model: é um modelo de objetos para documentos. Basicamente é um conjunto de objetos dentro do seu navegador
+que vai dar acesso aos componentes internos dentro do seu site(não funciona no node)
+
+  Árvore DOM: Começa da raiz, que é o window. A janela do navegador é um objeto DOM. E dentro do window tem vários outro objetos
+Exemplo: location(localização do site), document(os documentos do site), history(que vai guardando de onde vc veio, pra onde
+você vai e etc) e tem muito mais.
+  Dentro do document, que vamos usar bastante, tem o objeto html. E dentro de html, tem os "filhos" head e body. E mais..
+dentro de body, tem os "filhos" h1, p, div e etc. E assim vai seguindo a lógica da árvore DOM.
+
+	NAVEGANDO DENTRO DO DOM
+  Existem 5 maneiras de navegar pelo DOM: Por Marca, por ID, por Nome, por Classe e por Seletor.
+
+Marca: getElementsByTagName(): seleciona mais de um objeto, pois existem mais de um objeto com uma tag.
+ID: getElementById(): Seleciona o objeto pelo ID dele.
+Name: getElementsByName(): seleciona pelo nome.
+
+		-- Repare que quando o comando está no plural "Element(s)" você, se quiser selecionar um objeto específico,
+precisa informar qual objeto você quer logo após os parênteses dentro de colchetes. Exemplo: getElementsByName('Xana')[0].
+  Nesse exemplo você pega o PRIMEIRO objeto com esse nome.
+
+Classe: getElementsByClassName(): Seleciona pela classe.
+Seletor: querySelector() ou querySelectorAll() desse forma, você consegue selecionar com os especificadores do css. Exemplo:
+tendo uma div com classe X, você acessa assim: document.querySelector('div.X')
+
+	ADICIONANDO EVENTOS COM DOM
+
+Tendo uma div com um id x, você consegue fazer eventos nessa div utilizando o javascript. Como? 
+	Exemplo: <div id="x"> </div>
+
+script
+
+	let dv = document.getelementbyid('x')
+	
+	dv.addeventlistener('click', clicar)
+	dv.addeventlistener('mouseenter', entrar)
+	dv.addeventlistener('mouseleave', sair)
+	dv.addeventlistener('mousedown', pressionado)
+
+	function clicar() {
+	dv.innerHTML = '<p>Clicou</p
+	dv.style.background = 'red'
+}
+	function entrar() {
+	dv.innerHTML = 'Entrou'
+}
+	function sair() {
+	dv.innerHTML = 'Saiu'
+}
+
+	function pressionado() {
+	dv.style.brackground = 'purple'
+}
+
+script
+
+	Só ler que entende kkkk.	
+
+  O JavaScript não acusa erro de sintaxe, só no navegador utilizando o inspecionar. Aí sim você consegue ver o erro.
+
+	Condições em JS
+if (condição) {
+  [TRUE]
+} else {
+ [FALSE]
+}
+
+	//Tipos do condições:\\
+
+SIMPLES:
+   if (condição) {
+ [true]
+}
+
+
+ ESSA PORRA DESSE JAVASCRIPT DESSA CARALHA DESSA MERDA TEM QUE COLOCAR .VALUE PRA FAZER A CONDICIONAL DE STRING SENDO QUE
+PRA PORRA DE DESGRAÇA DE NÚMERO NÃO PRECISA!!!!!!!! VAI SE FODER ENTÃO NA HORA DE FAZER A BUCETA DE COMPARAÇÃO DE STRING
+FAZ ASSIM Ô ARROMBADO:
+
+if (string.value == 'x') {
+
+}
+
+	Condições aninhadas
+
+if() {
+   xxxxxx	
+} else if() {
+ xxxxxx
+  } else{
+ }	
+}
+
+
+	Pegar a hora do sistema
+
+  Declare duas variáveis, uma receberá new Date(), e a outra receberá variavel.getHours(). Exemplo:
+
+let x = new Date()
+let y = x.getHours()
+
+  Mas veja bem.. o cliente tem uma hora, o servidor, se o código estiver rodando o código em um servidor, tem outra hora.
+
+	//Condições Múltiplas\\
+
+switch (expressão){
+
+  case valor1:
+
+  break
+  case valor2:
+
+  break
+  case valor3:
+
+  break
+  default: 
+ 
+  break
+}
+
+SE LIGA!! --> O switch, vindo da linguagem C, precisa ter um brake após cada case! Quando o código for executado, o programa
+fará testes em cada condição e, se o teste for verdadeiro, ele irá tentar achar o próximo break para parar os testes e
+guardar o resultado. Caso não haja break, ele irá testar todas as condições, até o final do switch, tentando achar um break.

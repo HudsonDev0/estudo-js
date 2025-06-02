@@ -1,0 +1,21 @@
+@media screen and (max-width: 550px){
+  
+main{
+    background-color: white;
+    height: 400px;
+    width: 320px;
+    border-radius: 15px;
+    margin: auto;
+    padding: 15px;  
+}
+
+div img{
+    width: 70%;
+    height: 70%;
+}
+
+#boa{
+    margin-top: 50px;
+}
+
+}
