@@ -1,12 +1,13 @@
-@media screen and (max-width: 550px){
+@media screen and (max-width: 620px){
   
 main{
     background-color: white;
     height: 400px;
     width: 320px;
+    box-shadow: 10px 25px 1px rgba(0, 0, 0, 0.459) ;
     border-radius: 15px;
     margin: auto;
-    padding: 15px;  
+    padding: 15px;
 }
 
 div img{
@@ -16,6 +17,10 @@ div img{
 
 #boa{
     margin-top: 50px;
+}
+
+footer{
+    margin-top: 15px;
 }
 
 }

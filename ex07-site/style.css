@@ -21,7 +21,7 @@ main{
     height: 400px;
     width: 500px;
     border-radius: 15px;
-    box-shadow: 30px 10px 1px rgba(0, 0, 0, 0.459) ;
+    box-shadow: 25px 10px 1px rgba(0, 0, 0, 0.459) ;
     margin: auto;
     padding: 15px;
 }
