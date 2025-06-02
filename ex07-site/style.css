@@ -12,11 +12,16 @@ header{
     margin-top: 30px;
 }
 
+header h1{
+    text-shadow: 2px 1px 2px rgba(0, 0, 0, 0.329);
+}
+
 main{
     background-color: white;
     height: 400px;
     width: 500px;
     border-radius: 15px;
+    box-shadow: 30px 10px 1px rgba(0, 0, 0, 0.459) ;
     margin: auto;
     padding: 15px;
 }
@@ -24,6 +29,7 @@ main{
 div{
     text-align: center;
 }
+
 
 #msg{
     font-family: 'Courier New', Courier, monospace;
@@ -36,9 +42,11 @@ div{
     font-size: x-large;
 }
 
+
 footer{
     color: white;
     text-align: center;
     padding-top: 20px;
     font-style: italic;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.429);
 }
