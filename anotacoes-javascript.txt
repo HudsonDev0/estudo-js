@@ -252,3 +252,31 @@ switch (expressão){
 SE LIGA!! --> O switch, vindo da linguagem C, precisa ter um brake após cada case! Quando o código for executado, o programa
 fará testes em cada condição e, se o teste for verdadeiro, ele irá tentar achar o próximo break para parar os testes e
 guardar o resultado. Caso não haja break, ele irá testar todas as condições, até o final do switch, tentando achar um break.
+
+	Repetições em JS
+
+  while(condiçao) {
+	o bloco acontecerá enquanto a condição for verdadeira. [TESTE > AÇÃO]
+}
+
+do{
+	o bloco acontecerá enquanto a condição for verdadeira. [AÇÃO > TESTE]
+} while(condiçao)
+
+		No while, primeiro ele faz o teste e depois executa o bloco.
+
+		No do, primeiro ele executa o bloco e depois faz o teste.
+
+Exemplos:
+
+while(c <= 6){
+    console.log(`Tudo bem? ${c}`)
+    c++
+}
+
+do{
+    console.log(`Tudo bem? ${c}`)
+    c++
+}while(c <= 6)
+
+		
