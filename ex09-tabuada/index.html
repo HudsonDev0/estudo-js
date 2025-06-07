@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentus</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Tabuada</h1>
+    </header>
+    <main>
+        <div>
+            <p>
+                <label for="tnum">Tabuada de: </label>
+                <input type="number" name="num" id="tnum">
+            </p>            
+            <p>
+                <label for="ate">Até vezes: </label>
+                <input type="number" name="ate" id="tate">
+            </p>
+            <p>
+                <input type="button" value="CALCULAR" onclick="tabuada()">
+            </p>
+        </div>
+        <div id="res">
+            
+        </div>
+    </main>
+    <footer>
+        &copy; Larrasco
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

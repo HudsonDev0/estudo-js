@@ -279,4 +279,12 @@ do{
     c++
 }while(c <= 6)
 
-		
+		ESTRUTURA FOR
+
+  for(inicio ; teste ; incremento){
+
+}
+
+---> for(let c=0; c<=10; c++){
+
+}
