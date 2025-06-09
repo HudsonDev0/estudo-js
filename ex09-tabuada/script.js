@@ -11,11 +11,12 @@ if(n.value.length == 0 || ate.value.length == 0){
 
     n = Number(n.value)
     ate = Number(ate.value)
+    let tabresul = 0
 
     res.innerHTML = `Tabuada: <br>`
     for(let c = 1; c <= ate; c += 1){
-        let tabresul = n*c
-        res.innerHTML += `${tabresul} `
+        tabresul = n*c
+        res.innerHTML += `${n} x ${c} = [${tabresul}] | `
         
     }
 }
