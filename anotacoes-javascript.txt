@@ -288,3 +288,31 @@ do{
 ---> for(let c=0; c<=10; c++){
 
 }
+
+	ARRAY EM JS
+
+let num = [x,y,z]
+
+
+   COMANDOS INTERNOS:
+num.push(w): coloca mais um elemento no array.
+num.length: fala quantos elementos tem o array.
+num.sort(): coloca os números do array em ordem crescente.
+
+escrevendo dados do array com repetição for:
+
+  for(let pos = 0; pos < val.length; pos++){
+    console.log(`A posição ${pos} tem o valor ${val[pos]}`);
+};
+
+    SIMPLIFICANDO:
+
+for(let pos = 0 in val){
+    console.log(`A posição ${pos} tem o valor ${val[pos]}`);
+};
+
+    Procurnado dados em um array
+
+array.indexOf(x) <- se X estiver contido nesse array, esse comando retornará a sua posição.
+
+  
