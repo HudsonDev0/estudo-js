@@ -12,6 +12,10 @@ header{
     margin-top: 30px;
 }
 
+header h1 {
+    text-shadow: 2px 4px 1px black;
+}
+
 main{
     background-color: white;
     height: 30%;
@@ -19,6 +23,7 @@ main{
     border-radius: 15px;
     margin: auto;
     padding: 15px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.742);
 }
 
 div#res {
@@ -26,6 +31,7 @@ div#res {
     border-radius: 10px;
     width: 60%;
     min-height: 200px;
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.142);
 }
 
 div#res p {
@@ -42,11 +48,13 @@ input {
 div#res2 {
     display: block;
     margin-left: 70%;
+    padding: 10px;
     transform: translateY(-350px);
     background-color: bisque;
     width: 20%;
-    height: 400px;
+    height: 30%;
     border-radius: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.742);
 }
 
 div#res2 p {

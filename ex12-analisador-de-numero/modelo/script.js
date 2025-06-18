@@ -8,7 +8,7 @@ function adicionar() {
     if(x <= 0 || x > 100) {
         alert('Número inválido!')
     } else if(arraynum.indexOf(x) == -1) { {
-        res2.innerHTML = '<p></p>'
+        res2.innerHTML = '';
         arraynum.push(x);
         res.innerHTML += `<p>Número ${x} adicionado.</p>`
         }
@@ -33,6 +33,7 @@ function resul() {
         res2.innerHTML += `<p>O maior valor informado foi ${arraynum[arraynum.length - 1]}</p>`
         res2.innerHTML += `<p>A soma dos elementos do array é: ${s}</p>`
         res2.innerHTML += `<p>A média aritmética entre os elementos é: ${media}</p>`
+        res2.innerHTML += `<p>Array final: ${arraynum}</p>`
     }
     res.innerHTML = '<p></p>';
     arraynum = [];
