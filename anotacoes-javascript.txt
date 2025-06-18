@@ -15,7 +15,9 @@ Sinal de = significa que a variável RECEBE algo.
 
 let n1 = 5 (variável n1 recebe 5).
 
-let: declaração de variável
+let: declaração de variável EM BLOCO
+var: declaração de variável GLOBAL
+const: declaração de variável CONSTANTE
 
 let s1 = 'string'
 let s1 = "string"
@@ -33,7 +35,8 @@ No JavaScript, para os identificadores(variáveis) temos as seguintes regras:
 5. Não podem conter espaços
 6. Não podem ser palavras reservadas.
 
-TAMBÉM no Javascript uma letra maiuscula tem diferença. Uma variável n1 é diferente de uma variável N1.
+TAMBÉM no Javascript uma letra maiuscula tem diferença. Uma variável n1 é diferente de uma variável N1. O nome disso é
+case sensitive.
 
 Para saber o tipo da variável, em javascript, usar o comando typeof no node. Exemplo:
 let n = 200
@@ -147,7 +150,7 @@ Name: getElementsByName(): seleciona pelo nome.
 
 		-- Repare que quando o comando está no plural "Element(s)" você, se quiser selecionar um objeto específico,
 precisa informar qual objeto você quer logo após os parênteses dentro de colchetes. Exemplo: getElementsByName('Xana')[0].
-  Nesse exemplo você pega o PRIMEIRO objeto com esse nome.
+  Nesse exemplo você pega o PRIMEIRO elemento com esse nome.
 
 Classe: getElementsByClassName(): Seleciona pela classe.
 Seletor: querySelector() ou querySelectorAll() desse forma, você consegue selecionar com os especificadores do css. Exemplo:
@@ -289,10 +292,37 @@ do{
 
 }
 
+  NO FOR, PRIMEIRO ELE INICIA, DEPOIS FAZ O TESTE E EXECUTA O BLOCO. LOGO APÓS ELE IRÁ PARA O INCREMENTO! Veja essa estrutura
+para cálculo de fatorial:
+
+	for(c = 5; c > 1; c = c - 1"ou entao c--") {
+	
+	let fat = 1
+	fat = fat * c "ou entao fat *= c"
+	
+}
+
+No final, fat terá o valor de 120. Por que? Porque na primeira execução, C terá 5 e fat 5. Depois da primeira execução
+ocorrerá o incremento do -1 ao c. E então C terá 4 e fat 20(fat = 5(fat)*4(c)). Logo após terá mais um incremento.. c - 1
+E então c será igual a 3.. e fat igual a 60: 20(fat) recebe fat(20) * c(3) logo após essa execução irá ter mais um incremento
+e por aí vai.
+
+	Resumindo: C é maior que 1(o teste)? Se sim, ele executará o bloco. Depois fará o incremento. Depois do incremento,
+C ainda é maior que 1(o teste). Se sim, executará o bloco. E assim sussessivamente.
+
 	ARRAY EM JS
 
-let num = [x,y,z]
+let num = [1,4,7]
 
+  O array é constituído por elementos. Os elementos carregam nele: o espaço da memória, o valor colocado dentro dele
+e o índice! O índice, ou chave, é a posição que cada valor ocupa dentro do vetor.
+
+  Eu posso adicionar um novo elemento no array dessa forma: num[3] = 5. O que isso significa? Observe: no array num, coloque
+na posição [3](quarta posição) o número 5. Mesmo o array não tendo 4 posições, que é o caso do nosso exemplo, o JS irá
+criar uma nova posição e colocará esse dado atribuído.
+
+  Também há outra forma! num.push(5). Observe: dessa forma, colocaremos diretamente mais um valor no vetor, sem especificar
+a posição que esse dado ocupará. 
 
    COMANDOS INTERNOS:
 num.push(w): coloca mais um elemento no array.
@@ -315,4 +345,32 @@ for(let pos = 0 in val){
 
 array.indexOf(x) <- se X estiver contido nesse array, esse comando retornará a sua posição.
 
+	FUNÇÕES
+
+  Toda função precisa de uma chamada, um parâmetro ou um conjunto de parâmetros, uma ação e um retorno. Nem toda função
+tem parâmetro, nem toda função tem retorno. "São ações executadas assim que são chamadas ou em decorrência de algum evento."
+
+  function ação(param){
+
+ return res
+}
+
+ação(5)
   
+  --Exemplo de função na prática:
+
+ function parimp(n){
+if(n%2==0) {
+
+ return 'par'
+
+}else {
+
+return 'impar'
+ }
+}
+
+let res = parimp(13)
+
+  O res RECEBERÁ O RETURN DA FUNÇÃO COM O PARÂMETRO ESTABELECIDO. OU SEJA: ELA RECEBERÁ O RESULTADO DA CHAMADA DA FUNÇÃO
+PARIMP TESTANDO O NÚMERO 13, PARÂMETRO EM SUA CHAMADA.
