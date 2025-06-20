@@ -374,3 +374,17 @@ let res = parimp(13)
 
   O res RECEBERÁ O RETURN DA FUNÇÃO COM O PARÂMETRO ESTABELECIDO. OU SEJA: ELA RECEBERÁ O RESULTADO DA CHAMADA DA FUNÇÃO
 PARIMP TESTANDO O NÚMERO 13, PARÂMETRO EM SUA CHAMADA.
+
+	Conceitos básicos encerrados! Revisar sempre que precisar os exercícios da pasta.
+
+Agora temos a missão de estudar mais:
+
+	- FUNÇÕES
+	- OBJETOS
+	- MODULARIZAÇÃO
+	- RegEx
+	- jSON
+	- Ajax
+	- NodeJs
+
+   A caminhada continua...
